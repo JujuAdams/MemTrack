@@ -8,9 +8,9 @@ function __MemTrackJSONDecode(_string)
     if (MEMTRACK_ENABLED)
     {
         __MemTrackInitialize();
-        if (MEMTRACK_VERBOSE) __TrackingTrace("MemTrack: Processing JSON...");
+        if (MEMTRACK_VERBOSE) __MemTrackTrace("Processing JSON...");
         __MemTrackRecursiveMapCreate(_json, debug_get_callstack());
-        if (MEMTRACK_VERBOSE) __TrackingTrace("MemTrack: ...JSON processed");
+        if (MEMTRACK_VERBOSE) __MemTrackTrace("...JSON processed");
     }
     
     return _json;
@@ -19,7 +19,7 @@ function __MemTrackJSONDecode(_string)
 function __MemTrackRecursiveMapCreate(_map, _callstack)
 {
     global.__memTrackMaps[? _map] = __MemTrackDataCreate(_map, _callstack);
-    if (MEMTRACK_VERBOSE) __TrackingTrace("MemTrack: Created map ", _map, "          ", debug_get_callstack());
+    if (MEMTRACK_VERBOSE) __MemTrackTrace("Created map ", _map, "          ", debug_get_callstack());
     
     var _keyArray   = ds_map_keys_to_array(_map);
     var _valueArray = ds_map_values_to_array(_map);
@@ -48,7 +48,7 @@ function __MemTrackRecursiveMapCreate(_map, _callstack)
 function __MemTrackRecursiveListCreate(_list, _callstack)
 {
     global.__memTrackLists[? _list] = __MemTrackDataCreate(_list, _callstack);
-    if (MEMTRACK_VERBOSE) __TrackingTrace("MemTrack: Created list ", _list, "          ", debug_get_callstack());
+    if (MEMTRACK_VERBOSE) __MemTrackTrace("Created list ", _list, "          ", debug_get_callstack());
     
     var _i = 0;
     repeat(ds_list_size(_list))
@@ -69,7 +69,7 @@ function __MemTrackRecursiveListCreate(_list, _callstack)
 function __MemTrackRecursiveMapDestroy(_map, _callstack)
 {
     ds_map_delete(global.__memTrackMaps, _map);
-    if (MEMTRACK_VERBOSE) __TrackingTrace("MemTrack: Destroyed map ", _map, "          ", _callstack);
+    if (MEMTRACK_VERBOSE) __MemTrackTrace("Destroyed map ", _map, "          ", _callstack);
     
     var _keyArray   = ds_map_keys_to_array(_map);
     var _valueArray = ds_map_values_to_array(_map);
@@ -98,7 +98,7 @@ function __MemTrackRecursiveMapDestroy(_map, _callstack)
 function __MemTrackRecursiveListDestroy(_list, _callstack)
 {
     ds_map_delete(global.__memTrackLists, _list);
-    if (MEMTRACK_VERBOSE) __TrackingTrace("MemTrack: Destroyed list ", _list, "          ", _callstack);
+    if (MEMTRACK_VERBOSE) __MemTrackTrace("Destroyed list ", _list, "          ", _callstack);
     
     var _i = 0;
     repeat(ds_list_size(_list))

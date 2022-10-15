@@ -9,7 +9,7 @@ function __MemTrackListCreate()
     {
         __MemTrackInitialize();
         global.__memTrackLists[? _list] = __MemTrackDataCreate(_list, debug_get_callstack());
-        if (MEMTRACK_VERBOSE) __TrackingTrace("MemTrack: Created list ", _list, "          ", debug_get_callstack());
+        if (MEMTRACK_VERBOSE) __MemTrackTrace("Created list ", _list, "          ", debug_get_callstack());
     }
     
     return _list;
@@ -38,7 +38,7 @@ function __MemTrackMapAddList(_id, _key, _value)
     {
         __MemTrackInitialize();
         ds_map_delete(global.__memTrackLists, _value);
-        if (MEMTRACK_VERBOSE) __TrackingTrace("MemTrack: List ", _value, " added to map ", _id, " as \"", _key, "\", untracking list          ", debug_get_callstack());
+        if (MEMTRACK_VERBOSE) __MemTrackTrace("List ", _value, " added to map ", _id, " as \"", _key, "\", untracking list          ", debug_get_callstack());
     }
     
     return __ds_map_add_list__(_id, _key, _value);
@@ -56,7 +56,7 @@ function __MemTrackListMarkList(_id, _pos)
         {
             __MemTrackInitialize();
             ds_map_delete(global.__memTrackLists, _list);
-            if (MEMTRACK_VERBOSE) __TrackingTrace("MemTrack: List ", _list, " marked for binding to list ", _id, " (pos=", _pos, "), untracking list          ", debug_get_callstack());
+            if (MEMTRACK_VERBOSE) __MemTrackTrace("List ", _list, " marked for binding to list ", _id, " (pos=", _pos, "), untracking list          ", debug_get_callstack());
         }
     }
     

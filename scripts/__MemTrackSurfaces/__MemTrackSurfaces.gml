@@ -9,7 +9,7 @@ function __MemTrackSurfaceCreate(_width, _height)
     {
         __MemTrackInitialize();
         global.__memTrackSurfaces[? _surface] = __MemTrackDataCreate(_surface, debug_get_callstack());
-        if (MEMTRACK_VERBOSE) __TrackingTrace("MemTrack: Created surface ", _surface, " as ", _width, "x", _height, "          ", debug_get_callstack());
+        if (MEMTRACK_VERBOSE) __MemTrackTrace("Created surface ", _surface, " as ", _width, "x", _height, "          ", debug_get_callstack());
     }
     
     return _surface;
@@ -24,7 +24,7 @@ function __MemTrackSurfaceFree(_surface)
     {
         __MemTrackInitialize();
         ds_map_delete(global.__memTrackSurfaces, _surface);
-        if (MEMTRACK_VERBOSE) __TrackingTrace("MemTrack: Freed surface ", _surface, " (", surface_get_width(_surface), "x", surface_get_height(_surface), ")          ", debug_get_callstack());
+        if (MEMTRACK_VERBOSE) __MemTrackTrace("Freed surface ", _surface, " (", surface_get_width(_surface), "x", surface_get_height(_surface), ")          ", debug_get_callstack());
     }
     
     return __surface_free__(_surface);

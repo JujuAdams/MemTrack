@@ -9,7 +9,7 @@ function __MemTrackGridCreate(_width, _height)
     {
         __MemTrackInitialize();
         global.__memTrackGrids[? _grid] = __MemTrackDataCreate(_grid, debug_get_callstack());
-        if (MEMTRACK_VERBOSE) __TrackingTrace("MemTrack: Created grid ", _grid, " as ", _width, "x", _height, "          ", debug_get_callstack());
+        if (MEMTRACK_VERBOSE) __MemTrackTrace("Created grid ", _grid, " as ", _width, "x", _height, "          ", debug_get_callstack());
     }
     
     return _grid;
@@ -23,7 +23,7 @@ function __MemTrackGridDestroy(_grid)
     {
         __MemTrackInitialize();
         ds_map_delete(global.__memTrackGrids, _grid);
-        if (MEMTRACK_VERBOSE) __TrackingTrace("MemTrack: Destroyed grid ", _grid, " (", ds_grid_width(_grid), "x", ds_grid_height(_grid), ")          ", debug_get_callstack());
+        if (MEMTRACK_VERBOSE) __MemTrackTrace("Destroyed grid ", _grid, " (", ds_grid_width(_grid), "x", ds_grid_height(_grid), ")          ", debug_get_callstack());
     }
     
     return __ds_grid_destroy__(_grid);

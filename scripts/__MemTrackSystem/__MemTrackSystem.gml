@@ -1,3 +1,6 @@
+#macro __MEM_TRACK_VERSION  "0.0.1"
+#macro __MEM_TRACK_DATE     "2022-10-15"
+
 __MemTrackInitialize();
 
 function __MemTrackInitialize()
@@ -5,6 +8,8 @@ function __MemTrackInitialize()
     static _initialized = false;
     if (_initialized) return;
     _initialized = true;
+    
+    __MemTrackTrace("Welcome to MemTrack by @jujuadams! This is version ", __MEM_TRACK_VERSION, ", ", __MEM_TRACK_DATE);
     
     if (MEMTRACK_ENABLED)
     {
@@ -28,9 +33,9 @@ function __MemTrackInitialize()
 }
 
 /// @param value...
-function __TrackingTrace() 
+function __MemTrackTrace() 
 {
-	var _string = "";
+	var _string = "MemTrack: ";
 
 	var _i = 0;
 	repeat(argument_count)

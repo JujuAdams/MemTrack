@@ -9,7 +9,7 @@ function __MemTrackPQueueCreate()
     {
         __MemTrackInitialize();
         global.__memTrackPQueues[? _pqueue] = __MemTrackDataCreate(_pqueue, debug_get_callstack());
-        if (MEMTRACK_VERBOSE) __TrackingTrace("MemTrack: Created priority queue ", _pqueue, "          ", debug_get_callstack());
+        if (MEMTRACK_VERBOSE) __MemTrackTrace("Created priority queue ", _pqueue, "          ", debug_get_callstack());
     }
     
     return _pqueue;
@@ -24,7 +24,7 @@ function __MemTrackPQueueDestroy(_pqueue)
     {
         __MemTrackInitialize();
         ds_map_delete(global.__memTrackPQueues, _pqueue);
-        if (MEMTRACK_VERBOSE) __TrackingTrace("MemTrack: Destroyed priority queue ", _pqueue, "          ", debug_get_callstack());
+        if (MEMTRACK_VERBOSE) __MemTrackTrace("Destroyed priority queue ", _pqueue, "          ", debug_get_callstack());
     }
     
     return __ds_priority_destroy__(_pqueue);
