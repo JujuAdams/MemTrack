@@ -1,4 +1,4 @@
-#macro __MEM_TRACK_VERSION  "0.0.1"
+#macro __MEM_TRACK_VERSION  "0.0.2"
 #macro __MEM_TRACK_DATE     "2022-10-15"
 
 __MemTrackInitialize();
