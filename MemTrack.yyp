@@ -1,7 +1,20 @@
 {
   "resources": [
-    {"id":{"name":"Script1","path":"scripts/Script1/Script1.yy",},"order":2,},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":1,},
+    {"id":{"name":"__MemTrackSurfaces","path":"scripts/__MemTrackSurfaces/__MemTrackSurfaces.yy",},"order":1,},
+    {"id":{"name":"__MemTrackMaps","path":"scripts/__MemTrackMaps/__MemTrackMaps.yy",},"order":3,},
+    {"id":{"name":"__MemTrackSystem","path":"scripts/__MemTrackSystem/__MemTrackSystem.yy",},"order":0,},
+    {"id":{"name":"__MemTrackGrids","path":"scripts/__MemTrackGrids/__MemTrackGrids.yy",},"order":4,},
+    {"id":{"name":"rB","path":"rooms/rB/rB.yy",},"order":2,},
+    {"id":{"name":"__MemTrackJSON","path":"scripts/__MemTrackJSON/__MemTrackJSON.yy",},"order":7,},
+    {"id":{"name":"__MemTrackPQueues","path":"scripts/__MemTrackPQueues/__MemTrackPQueues.yy",},"order":5,},
+    {"id":{"name":"__MemTrackMPGrids","path":"scripts/__MemTrackMPGrids/__MemTrackMPGrids.yy",},"order":6,},
+    {"id":{"name":"oMemoryLeak","path":"objects/oMemoryLeak/oMemoryLeak.yy",},"order":3,},
+    {"id":{"name":"oDetector","path":"objects/oDetector/oDetector.yy",},"order":4,},
+    {"id":{"name":"__MemTrackConfig","path":"scripts/__MemTrackConfig/__MemTrackConfig.yy",},"order":0,},
+    {"id":{"name":"__MemTrackLists","path":"scripts/__MemTrackLists/__MemTrackLists.yy",},"order":2,},
+    {"id":{"name":"MemTrackReport","path":"scripts/MemTrackReport/MemTrackReport.yy",},"order":2,},
+    {"id":{"name":"__MemTrackConfigData","path":"scripts/__MemTrackConfigData/__MemTrackConfigData.yy",},"order":1,},
+    {"id":{"name":"rA","path":"rooms/rA/rA.yy",},"order":1,},
   ],
   "Options": [
     {"name":"Amazon Fire","path":"options/amazonfire/options_amazonfire.yy",},
@@ -28,9 +41,13 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rA","path":"rooms/rA/rA.yy",},},
+    {"roomId":{"name":"rB","path":"rooms/rB/rB.yy",},},
   ],
-  "Folders": [],
+  "Folders": [
+    {"folderPath":"folders/MemTrack.yy","order":0,"resourceVersion":"1.0","name":"MemTrack","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/MemTrack/(System).yy","order":4,"resourceVersion":"1.0","name":"(System)","tags":[],"resourceType":"GMFolder",},
+  ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
   ],

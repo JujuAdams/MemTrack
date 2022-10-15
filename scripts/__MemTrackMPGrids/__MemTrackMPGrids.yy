@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "MemTrack",
-    "path": "MemTrack.yyp",
+    "name": "(System)",
+    "path": "folders/MemTrack/(System).yy",
   },
   "resourceVersion": "1.0",
-  "name": "Script1",
+  "name": "__MemTrackMPGrids",
   "tags": [],
   "resourceType": "GMScript",
 }
