@@ -1,5 +1,5 @@
-#macro __MEM_TRACK_VERSION  "0.0.2"
-#macro __MEM_TRACK_DATE     "2022-10-15"
+#macro __MEM_TRACK_VERSION  "0.0.3"
+#macro __MEM_TRACK_DATE     "2023-06-06"
 
 __MemTrackInitialize();
 
@@ -20,6 +20,7 @@ function __MemTrackInitialize()
         global.__memTrackGrids    = __ds_map_create__();
         global.__memTrackPQueues  = __ds_map_create__();
         global.__memTrackMPGrids  = __ds_map_create__();
+        global.__memTrackPaths    = __ds_map_create__();
         
         global.__memTrackData = [
             { __name: "Surfaces",        __map: global.__memTrackSurfaces, __exists: surface_exists         },
@@ -28,6 +29,7 @@ function __MemTrackInitialize()
             { __name: "Grids",           __map: global.__memTrackGrids,    __exists: __MemTrackGridExists   },
             { __name: "Priority Queues", __map: global.__memTrackPQueues,  __exists: __MemTrackPQueueExists },
             { __name: "MP Grids",        __map: global.__memTrackMPGrids,  __exists: undefined, /*GM has no functionality for this*/ },
+            { __name: "Paths",           __map: global.__memTrackPaths,    __exists: __MemTrackPathExists },
         ];
     }
 }

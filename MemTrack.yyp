@@ -1,11 +1,14 @@
 {
+  "resourceType": "GMProject",
+  "resourceVersion": "1.6",
+  "name": "MemTrack",
   "resources": [
     {"id":{"name":"__MemTrackSurfaces","path":"scripts/__MemTrackSurfaces/__MemTrackSurfaces.yy",},"order":1,},
     {"id":{"name":"__MemTrackMaps","path":"scripts/__MemTrackMaps/__MemTrackMaps.yy",},"order":3,},
     {"id":{"name":"__MemTrackSystem","path":"scripts/__MemTrackSystem/__MemTrackSystem.yy",},"order":0,},
     {"id":{"name":"__MemTrackGrids","path":"scripts/__MemTrackGrids/__MemTrackGrids.yy",},"order":4,},
     {"id":{"name":"rB","path":"rooms/rB/rB.yy",},"order":2,},
-    {"id":{"name":"__MemTrackJSON","path":"scripts/__MemTrackJSON/__MemTrackJSON.yy",},"order":7,},
+    {"id":{"name":"__MemTrackJSON","path":"scripts/__MemTrackJSON/__MemTrackJSON.yy",},"order":8,},
     {"id":{"name":"__MemTrackPQueues","path":"scripts/__MemTrackPQueues/__MemTrackPQueues.yy",},"order":5,},
     {"id":{"name":"__MemTrackMPGrids","path":"scripts/__MemTrackMPGrids/__MemTrackMPGrids.yy",},"order":6,},
     {"id":{"name":"oMemoryLeak","path":"objects/oMemoryLeak/oMemoryLeak.yy",},"order":3,},
@@ -29,8 +32,6 @@
     {"name":"Switch","path":"options/switch/options_switch.yy",},
     {"name":"tvOS","path":"options/tvos/options_tvos.yy",},
     {"name":"Windows","path":"options/windows/options_windows.yy",},
-    {"name":"Windows UWP","path":"options/windowsuap/options_windowsuap.yy",},
-    {"name":"Xbox One","path":"options/xboxone/options_xboxone.yy",},
     {"name":"Xbox Series XS","path":"options/xboxseriesxs/options_xboxseriesxs.yy",},
     {"name":"operagx","path":"options/operagx/options_operagx.yy",},
   ],
@@ -45,21 +46,17 @@
     {"roomId":{"name":"rB","path":"rooms/rB/rB.yy",},},
   ],
   "Folders": [
-    {"folderPath":"folders/MemTrack.yy","order":0,"resourceVersion":"1.0","name":"MemTrack","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/MemTrack/(System).yy","order":4,"resourceVersion":"1.0","name":"(System)","tags":[],"resourceType":"GMFolder",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"MemTrack","folderPath":"folders/MemTrack.yy","order":0,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"(System)","folderPath":"folders/MemTrack/(System).yy","order":4,},
   ],
   "AudioGroups": [
-    {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
+    {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},
   ],
   "TextureGroups": [
-    {"isScaled":true,"compressFormat":"bz2","autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},
+    {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","isScaled":true,"compressFormat":"bz2","loadType":"default","directory":"","autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,},
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.3.0.625",
+    "IDEVersion": "2022.0.0.19",
   },
-  "resourceVersion": "1.5",
-  "name": "MemTrack",
-  "tags": [],
-  "resourceType": "GMProject",
 }
