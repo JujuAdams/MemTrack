@@ -4,4 +4,5 @@ ds_map_destroy(mapSafe);
 ds_grid_destroy(gridSafe);
 ds_priority_destroy(prioritySafe);
 mp_grid_destroy(mpGridSafe);
+path_delete(pathSafe);
 ds_map_destroy(jsonSafe);

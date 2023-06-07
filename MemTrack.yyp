@@ -10,6 +10,7 @@
     {"id":{"name":"rB","path":"rooms/rB/rB.yy",},"order":2,},
     {"id":{"name":"__MemTrackJSON","path":"scripts/__MemTrackJSON/__MemTrackJSON.yy",},"order":8,},
     {"id":{"name":"__MemTrackPQueues","path":"scripts/__MemTrackPQueues/__MemTrackPQueues.yy",},"order":5,},
+    {"id":{"name":"__MemTrackPaths","path":"scripts/__MemTrackPaths/__MemTrackPaths.yy",},"order":7,},
     {"id":{"name":"__MemTrackMPGrids","path":"scripts/__MemTrackMPGrids/__MemTrackMPGrids.yy",},"order":6,},
     {"id":{"name":"oMemoryLeak","path":"objects/oMemoryLeak/oMemoryLeak.yy",},"order":3,},
     {"id":{"name":"oDetector","path":"objects/oDetector/oDetector.yy",},"order":4,},
